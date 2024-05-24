@@ -1,0 +1,182 @@
+.availabilitycontainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 24px 24px 24px;
+
+    @include respond(desktop) {
+        align-items: flex-start;
+    }
+
+    &__weeklyavailablitycardContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 10px;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #D8E0F0;
+        border-radius: 16px;
+
+        @include respond(desktop) {
+            width: 600px;
+        }
+
+        &__heading {
+            @include heading
+        }
+
+        &_subheading {
+            @include subHeading
+        }
+
+        &__weeklyavailability__button {
+            height: 45px;
+        }
+
+    }
+
+    &__heading {
+        display: flex;
+        width: 97%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10%;
+
+        &__heading {
+            @include heading;
+            width: 70%;
+        }
+
+        &__viewAll {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            width: 30%;
+            text-align: right;
+            color: #0094FF;
+        }
+
+        @include respond(desktop) {
+            width: 600px;
+            margin-top: 5%;
+        }
+
+    }
+
+    &__cardscontainer {
+        margin-top: 6%;
+        width: 100%;
+
+        @include respond(desktop) {
+            width: 600px;
+            margin-top: 2%;
+
+        }
+    }
+}
+
+.availability_container {
+    padding: 10px;
+
+    &__cardsContainer {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+    }
+}
+
+.slotsCardcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    padding: 14px;
+    width: 100%;
+    background: #FFFFFF;
+
+
+    border: 1px solid #D8E0F0;
+    border-radius: 16px;
+
+
+    &__left {
+        width: 78%;
+
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+
+        color: #7D8592;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        &__date {
+            @include heading;
+            font-weight: 600;
+            font-size: 15px;
+
+        }
+
+        &__slots {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            &__singleslot {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 150%;
+                color: #7D8592;
+            }
+
+        }
+    }
+
+    &__center {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 150%;
+        text-align: left;
+        width: 35%;
+
+        &__unavailable {
+            color: #CB0606;
+        }
+
+        &__edited {
+            color: #00AD93;
+        }
+    }
+
+    &__right {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            background: #F4F9FD;
+            border-radius: 8px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

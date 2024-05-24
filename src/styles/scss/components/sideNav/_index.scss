@@ -1,0 +1,235 @@
+.sideNavBarContainer {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+
+  &__items {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+      0px 4px 8px rgba(96, 97, 112, 0.16);
+    border-radius: 0px 32px 32px 0px;
+
+    width: 260px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__navbar {
+      padding: 40px 0px 5px 40px;
+
+      &__logocontainer {
+        width: 188px;
+
+        &__img {
+          width: 100%;
+          margin-left: -10%;
+        }
+      }
+
+      &__navlinksContainer {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+      }
+
+      // }
+    }
+
+    &__profile {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+
+      gap: 5px;
+      width: 100%;
+      padding: 24px 0px 24px 10px;
+      border-top: 1px solid #d8e0f0;
+      border-bottom: 1px solid #d8e0f0;
+
+      &__left {
+        width: 50px;
+
+        &__img {
+          width: 48px;
+          height: 48px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        cursor: pointer;
+
+        &__username {
+          font-size: 16px;
+          font-weight: 700;
+          color: #0a1629;
+        }
+
+        &__viewProfile {
+          font-size: 14px;
+
+          font-weight: 600;
+          color: #7d8592;
+        }
+      }
+
+      &__righticon {
+        width: 10px;
+        height: 20px;
+        display: flex;
+        margin-left: 5px;
+        align-self: center;
+
+        .arrow {
+          width: 100%;
+          height: 100%;
+          transition: all 0.2s;
+
+          &__active {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+  }
+
+  &__topContainer {
+    width: 100%;
+    padding: 20px 60px;
+    border-bottom: 1px solid #d8e0f0;
+
+    &__headingContainer {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      .sideNavBackIcon {
+        display: flex;
+        align-self: center;
+        cursor: pointer;
+      }
+
+      .sideNavheading {
+        color: $color-black;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    // height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__mobileView {
+      width: 100%;
+    }
+  }
+
+  &__dropDown {
+    width: 200px;
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    align-self: center;
+    z-index: 11;
+    border: 1px solid #d8e0f0;
+    box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04),
+      0px 8px 16px rgba(96, 97, 112, 0.16);
+    border-radius: 16px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      cursor: pointer;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        display: flex;
+        align-self: center;
+        width: 24px;
+        height: 24px;
+      }
+
+      &__text {
+        display: flex;
+        align-self: center;
+        margin-left: 12px;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: $color-black;
+      }
+    }
+  }
+}
+
+.navlinkContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+  height: 48px;
+
+  cursor: pointer;
+
+  &__img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__text {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    width: 85%;
+    color: #0a1629;
+    text-align: left;
+  }
+}
+.dropdownsidenav {
+  margin-top: -10px !important;
+}
+.sideNavBarContainer__items__profile .ui.floating.dropdown > .menu {
+  margin-top: -30px !important;
+}

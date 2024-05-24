@@ -1,0 +1,9 @@
+.ui.progress .bar {
+  background: $color-black !important;
+  min-width: 0px !important;
+
+  @include respond(desktop) {
+    height: 10px !important;
+    border-radius: 6px !important;
+  }
+}

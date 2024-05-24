@@ -1,0 +1,123 @@
+.multiselect-container {
+  display: flex;
+  flex-direction: column;
+  // margin-bottom: 6rem;
+
+  label {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__box {
+    padding: 16px;
+    border-radius: 16px;
+
+    border: 1px solid $color-border-badge;
+    width: 100%;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &__active {
+      border: 1px solid $color-black;
+      box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+        0px 4px 8px rgba(96, 97, 112, 0.16);
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &__timeslot-container {
+      display: none;
+
+      &__active {
+        display: block;
+        margin-top: 16px;
+        border-top: 1px solid $color-border-badge;
+        padding-top: 16px;
+      }
+
+      &__timeslots {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        &__ctaicons {
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+
+          .addicon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+          }
+
+          .deleteicon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+          }
+        }
+
+        // &__plusicon {
+        //   width: 12%;
+        //   // height: 24px;
+        //   display: flex;
+        //   align-self: center;
+
+        //   #addIcon {
+        //     width: unset;
+        //   }
+
+        //   #deleteSlot {
+        //     width: 20px;
+        //     height: 20px;
+        //     margin-left: 2px;
+        //   }
+        // }
+
+        &__active {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &__applybutton {
+        padding: 8px 16px;
+        text-align: center;
+        border-radius: 12px;
+        border: 1px solid $color-black;
+        color: black;
+        font-weight: 600;
+        font-size: 16px;
+        outline: none;
+        background-color: $color-white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ui.checkbox input:checked ~ label:after {
+  color: $color-white !important;
+  background-color: $color-black;
+  font-size: 10px !important;
+}
+
+.ui.selection.dropdown {
+  border-radius: 16px !important;
+  min-width: 0px !important;
+  line-height: unset !important;
+}

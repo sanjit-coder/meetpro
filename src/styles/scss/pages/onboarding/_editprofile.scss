@@ -1,0 +1,133 @@
+.editprofile_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0px;
+  min-height: calc(100vh - 72px);
+
+  @include respond(desktop) {
+    min-height: initial;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .editprofile_detailscontainer {
+    width: 85%;
+
+    @include respond(desktop) {
+      margin-left: 60px;
+      width: 54%;
+    }
+  }
+
+  .editprofile_footer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    // position: absolute;
+
+    padding-bottom: 5%;
+
+    @include respond(desktop) {
+      justify-content: start;
+      margin-left: 70px;
+      text-align: initial;
+    }
+  }
+
+  .editprofile_borders {
+    background: #d8e0f0;
+    height: 1px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+
+  .editprofile_addsocialmedia {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__icon {
+      display: flex;
+      align-self: center;
+      width: 17px;
+      height: 17px;
+      margin-right: 6px;
+    }
+
+    &__text {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: #358bfe;
+    }
+  }
+
+  .editprofile_bottomtext {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 95%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7d8592;
+    margin-top: 16px;
+    font-display: swap;
+  }
+}
+
+.profileNav {
+  width: 100%;
+}
+
+.editprofile_name {
+  margin-top: 24px;
+}
+
+.editprofile__socialmediacontainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__input {
+    display: flex;
+    width: 93%;
+    margin-right: 10px;
+
+    @include respond(phone) {
+      width: 72%;
+      margin-right: 10%;
+    }
+
+    @include respond(smallphone) {
+      width: 72%;
+      margin-right: 19%;
+    }
+  }
+
+  &__delete {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-self: center;
+    transform: translateY(-50%);
+
+    @include respond(phone) {
+      transform: translateY(-50%);
+      flex-grow: 1;
+    }
+
+    @include respond(smallphone) {
+      transform: translateY(-50%);
+      width: 18px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.testimonialcardContainer {
+  width: 83%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15%;
+
+  &__callsPage {
+    width: 100%;
+    align-items: initial;
+  }
+
+  &__slides {
+    width: 100%;
+
+    &__card {
+      padding: 24px 24px 24px 24px;
+      // gap: 24px;
+      background: #ffffff;
+      // width: 312px;
+      min-height: 310px;
+      border: 1px solid #d8e0f0;
+      // box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
+      border-radius: 24px;
+
+      @include respond(phone) {
+        max-height: 450px;
+      }
+
+      &___topContainer {
+        width: 100%;
+        text-align: start;
+
+        &__img {
+          width: 100%;
+        }
+      }
+
+      &__reviewText {
+        width: 100%;
+        margin-top: 24px;
+        font-family: "Nunito Sans";
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #7d8592;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #d8e0f0;
+      }
+
+      &__bottomContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        align-items: center;
+        gap: 25px;
+
+        &__left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          &__name {
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #0a1629;
+            word-break: break-word;
+          }
+
+          &__service {
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 150%;
+            color: #7d8592;
+            word-break: break-word;
+          }
+        }
+
+        &__right {
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.slick-list {
+  margin: 0 -5px;
+}
+
+.slick-slide > div {
+  padding: 0 5px;
+}
+.testimonialarrow {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.slick-dots {
+  bottom: -45px;
+}
+
+.ui.star.rating {
+  .active {
+    .icon {
+      color: #fdb306 !important;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.CallingCard {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  // width: 312px;
+  width: 100%;
+  margin: 16px 0 16px 0;
+  border-radius: 16px;
+  padding: 14px;
+  gap: 14px;
+  border: 1px solid #d8e0f0;
+
+  @include respond(desktop) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 48.5%;
+  }
+
+  &__topContainer {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    height: auto;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      height: inherit;
+      border-radius: 8px;
+      font-family: "Nunito Sans";
+      color: white;
+
+      @include respond(desktop) {
+        width: 20%;
+      }
+
+      &__tick {
+        width: 16px;
+        height: 11px;
+        margin-bottom: 5px;
+      }
+
+      &__date {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+      }
+
+      &__day {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+
+      width: 75%;
+      font-family: "Nunito Sans";
+      line-height: 150%;
+
+      &__name {
+        margin-top: 5px;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      &__testimonial {
+        margin-top: 6px;
+        padding-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #d8e0f0;
+
+        &__rating {
+          width: 50%;
+        }
+
+        &__icon {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &__service {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+        // align-items: center;
+        color: #0a1629;
+
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &__time {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: #0a1629;
+
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &__viewDetails {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        color: #0094ff;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__bottomContainer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 14px 0 0 0;
+    justify-content: center;
+
+    border-top: 1px solid #d8e0f0;
+
+    & > button {
+      width: 100%;
+    }
+  }
+}

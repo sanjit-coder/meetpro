@@ -1,0 +1,63 @@
+.bookSlotcard {
+  background-color: $color-white;
+  border: 1px solid $color-border-badge;
+  border-radius: 16px;
+  padding: 16px;
+  // height: 136px;
+  width: 100%;
+  cursor: pointer;
+
+  &__info {
+    display: flex;
+    border-bottom: 1px solid $color-border-badge;
+    padding-bottom: 16px;
+
+    .icon {
+      margin-right: 10px;
+      min-width: 32px;
+      height: 32px;
+    }
+
+    .textcontainer {
+      display: flex;
+      flex-direction: column;
+
+      &__heading {
+        display: flex;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4px;
+        color: $color-black;
+
+        @include respond(desktop) {
+          font-size: 18px;
+        }
+      }
+
+      &__text {
+        font-weight: 600;
+        font-size: 12px;
+        color: $color-badge;
+
+        @include respond(desktop) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__buttoncontainer {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &__button {
+      flex-basis: 40%;
+      margin-right: 8px;
+    }
+
+    &__bookbutton {
+      flex-basis: 55%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+const namespace = `TESTIMONIAL_`;
+
+export const SET_IS_LOADING = `${namespace}SET_IS_LOADING`;
+
+export const GET_TESTIMONIAL = `${namespace}GET_TESTIMONIAL`;
+
+export const GET_TESTIMONIAL_SUCCESS = `${namespace}GET_TESTIMONIAL_SUCCESS`;
+
+export const CREATE_TESTIMONIAL = `${namespace}CREATE_TESTIMONIAL`;
+
+export const CREATE_TESTIMONIAL_SUCCESS = `${namespace}CREATE_TESTIMONIAL_SUCCESS`;
+
+export const PUBLISH_TESTIMONIAL = `${namespace}PUBLISH_TESTIMONIAL`;
+
+export const PUBLISH_TESTIMONIAL_SUCCESS = `${namespace}PUBLISH_TESTIMONIAL_SUCCESS`;
+
+export const UNPUBLISH_TESTIMONIAL = `${namespace}UNPUBLISH_TESTIMONIAL`;
+
+export const UNPUBLISH_TESTIMONIAL_SUCCESS = `${namespace}UNPUBLISH_TESTIMONIAL_SUCCESS`;

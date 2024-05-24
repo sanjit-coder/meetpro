@@ -1,0 +1,205 @@
+.ModalWrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  transition: opacity 2s linear, z-index 0.1s linear;
+
+  z-index: 100;
+}
+
+.Backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  left: 0;
+  top: 0;
+
+  transition: background-color 0.1s linear;
+
+  &__Show {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  &__Hide {
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+}
+
+.Modal {
+  width: 100vw;
+  background-color: #ffffff;
+  font-family: "Nunito Sans", sans-serif;
+  font-display: swap;
+  position: relative;
+
+  // animation: appear 1s linear;
+  transition: bottom 500ms linear;
+
+  border-radius: 32px 32px 0px 0px;
+  padding: 32px;
+  // overflow: scroll;
+  max-height: 80vh;
+  padding-top: 12px;
+
+  &--Close {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  &__Show {
+    bottom: 0;
+    --finalPosition: 0vh;
+    animation: slide-in 200ms linear;
+  }
+
+  &__Hide {
+    bottom: -100vh;
+  }
+
+  &__Head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 24px;
+
+    &--Details {
+      display: block;
+      width: calc(100% - 24px);
+      font-size: 16px;
+      font-weight: 700;
+
+      span {
+        margin-right: 8px !important;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__Body {
+    max-height: 90vh;
+
+    min-height: 70vh; // JISKO SABSE CHOTA MODAL USKI HEIGHT RAKH DENA IDHAR
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0px 16px;
+  }
+
+  &__Footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+
+    background: #ffffff;
+    box-shadow: 0px 1px 4px rgba(242, 242, 242, 0.25);
+
+    &__Fixed {
+      position: fixed;
+    }
+
+    &__Absolute {
+      position: absolute;
+    }
+  }
+}
+
+.bottomsheetinputs {
+  display: flex;
+  flex-direction: column;
+
+  .razorpaytext {
+    // margin-top: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 15%;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 50%;
+    }
+
+    @include respond(smallphone) {
+      width: 100%;
+      margin-top: 25%;
+    }
+
+    &__icon {
+      display: flex;
+      align-self: center;
+      margin-right: 6px;
+    }
+  }
+}
+
+.confirmbuttoncontainer {
+  width: 100%;
+
+  // @include respond(phone) {
+  //   width: 90%;
+  //   position: absolute;
+  //   bottom: 5%;
+  //   left: 50%;
+  //   transform: translate(-50%, 0px);
+  // }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: $color-black;
+    border-radius: 16px;
+    color: $color-white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(300px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// .ui.visible.transition {
+//   display: none !important;
+// }
+// .ui.dimmer {
+//   background-color: white !important;
+// }

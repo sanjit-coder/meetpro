@@ -1,0 +1,68 @@
+.pricingDetailsParentContainer {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px;
+  font-family: "Nunito Sans";
+
+  @include respond(phone) {
+    padding: 24px;
+  }
+
+  .pricingDetailsContainer {
+    display: flex;
+    flex-direction: column;
+
+    &_heading {
+      color: $color-black;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 150%;
+
+      span {
+        margin-left: 2px;
+        background: linear-gradient(110deg, #00d1ff 6.64%, #9b00fa 94.88%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    ol {
+      color: $color-badge;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 2.7%;
+
+      @include respond(phone) {
+        margin-left: 5%;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    &_submitBtn {
+      cursor: pointer;
+      margin-top: 16px;
+      display: flex;
+      padding: 12px 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      background-color: $color-black;
+      color: $color-white;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      border: none;
+      outline: none;
+
+      @include respond(phone) {
+        padding: 8px 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.onboardingcontainer {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0px;
+  min-height: calc(100vh - 72px);
+  position: relative;
+  // padding-bottom: 48px;
+  // min-height: 100vh !important;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(desktop) {
+    padding-top: 65px;
+  }
+
+  &__availability {
+    @include respond(desktop) {
+      justify-content: start;
+      align-items: start;
+    }
+  }
+
+  &__bankdetails {
+    min-height: initial;
+
+    @include respond(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__box {
+    width: 85%;
+    color: $color-black;
+    margin-bottom: 10px;
+
+    @include respond(desktop) {
+      width: 100%;
+      margin-left: 20%;
+    }
+
+    &__register {
+      @include respond(desktop) {
+        width: 45%;
+        margin-left: 0%;
+      }
+    }
+
+    &__availability {
+      @include respond(desktop) {
+        margin-left: 60px;
+        width: 54%;
+        height: 100vh;
+        overflow-y: scroll;
+      }
+    }
+
+    &__progresscontainer {
+      display: flex;
+
+      & > * {
+        width: 33%;
+        margin-right: 8px;
+      }
+    }
+
+    &__notescontainer {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 8px;
+
+      @include respond(desktop) {
+        font-size: 32px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 32px;
+
+      @include respond(desktop) {
+        font-size: 18px;
+      }
+    }
+
+    &__info {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    &__badgecontainer {
+      display: flex;
+      flex-wrap: wrap;
+      // margin-bottom: 5rem;
+    }
+
+    &__username {
+      margin-bottom: 32px;
+      margin-top: 7px;
+      color: $color-badge;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}

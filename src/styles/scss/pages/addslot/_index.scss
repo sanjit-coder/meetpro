@@ -1,0 +1,152 @@
+.addslotcontainer {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0px;
+  position: relative;
+  min-height: calc(100vh - 72px);
+  padding-bottom: 48px;
+
+  @include respond(desktop) {
+    justify-content: initial;
+
+    min-height: calc(100vh - 72px);
+  }
+
+  .buttoncontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // position: sticky;
+    padding-bottom: 20px;
+  }
+
+  .addslot {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    @include respond(desktop) {
+      width: 45%;
+    }
+
+    & > * {
+      margin-bottom: 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &__buttoncontainer {
+      display: flex;
+      position: sticky !important;
+
+      &__button {
+        min-width: 124px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.ui.modal > .header {
+  border-bottom: none !important;
+}
+
+.ui.modal {
+  @include respond(phone) {
+    width: 85% !important;
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.04),
+      0px 16px 24px rgba(96, 97, 112, 0.16) !important;
+    border-radius: 24px !important;
+  }
+
+  @include respond(desktop) {
+    width: 45% !important;
+    max-height: 80vh;
+    overflow-y: scroll;
+    box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.04),
+      0px 16px 24px rgba(96, 97, 112, 0.16) !important;
+    border-radius: 24px !important;
+  }
+}
+
+.modalcontent {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 24px;
+
+  &__crossicon {
+    align-self: flex-end;
+    transform: translateX(45%);
+    cursor: pointer;
+  }
+
+  &__alerticon {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  &__heading {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-black;
+    text-align: center;
+    margin-bottom: 8px;
+    font-display: swap;
+  }
+
+  &__text {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    font-display: swap;
+    text-align: center;
+
+    color: #7d8592;
+    margin-bottom: 24px;
+  }
+
+  &__delete {
+    padding: 8px 16px;
+    background-color: $color-black;
+    border-radius: 12px;
+    width: 100%;
+    height: 40px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-display: swap;
+  }
+
+  &__cancel {
+    background-color: $color-white;
+    width: 100%;
+    height: 40px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-black;
+    cursor: pointer;
+    font-display: swap;
+  }
+}

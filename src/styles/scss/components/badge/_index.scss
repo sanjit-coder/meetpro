@@ -1,0 +1,35 @@
+@import "../../variables/variables";
+
+.badge {
+  color: $color-badge;
+  padding: 12px;
+  background-color: $color-white;
+  border-radius: 16px;
+  border: 1px solid $color-border-badge;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  @include respond(desktop) {
+    padding: 12px 24px;
+  }
+
+  &__active {
+    box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+      0px 4px 8px rgba(96, 97, 112, 0.16);
+    border: 1px solid $color-black;
+    color: $color-black;
+    cursor: pointer;
+  }
+
+  &__inactive {
+    background: #e0e0e0;
+    border: 1px solid $color-border-badge;
+    border-radius: 16px;
+    color: $color-badge;
+  }
+}

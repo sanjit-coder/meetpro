@@ -1,0 +1,9 @@
+const nameSpace = `BLOCKEDDATES_`
+
+export const SET_ISLOADING = `${nameSpace}SET_ISLOADING`
+
+export const GET_BLOCKED_DATES = `${nameSpace}GET_BLOCKED_DATES`
+export const GET_BLOCKED_DATES_SUCCESS = `${nameSpace}GET_BLOCKED_DATES_SUCCESS`
+
+export const MODIFY_BLOCKED_DATES = `${nameSpace}MODIFY_BLOCKED_DATES`
+export const MODIFY_BLOCKED_DATES_SUCCESS = `${nameSpace}MODIFY_BLOCKED_DATES_SUCCESS`

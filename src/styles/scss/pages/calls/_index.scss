@@ -1,0 +1,446 @@
+@import "../../variables/variables";
+
+.callscontainer {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  @include respond(desktop) {
+    height: 100vh;
+  }
+
+  &__nocallsbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 85%;
+    transform: translateY(-50%);
+
+    @include respond(desktop) {
+      width: 57%;
+    }
+
+    .primary {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    .secondary {
+      display: flex;
+      align-self: center;
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      color: #7d8592;
+    }
+  }
+
+  @include respond(desktop) {
+    justify-content: start;
+    margin-left: 60px;
+    width: 100%;
+  }
+
+  &__box {
+    width: 85%;
+
+    margin-top: 2%;
+
+    @include respond(desktop) {
+      width: 67%;
+      margin-bottom: 100px;
+    }
+
+    &__header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @include respond(desktop) {
+        margin-bottom: 30px;
+      }
+
+      .callHeaderActive {
+        box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+          0px 4px 8px rgba(96, 97, 112, 0.16);
+        border: 1px solid black;
+        color: $color-black;
+        cursor: pointer;
+      }
+
+      &__badge {
+        width: 49.5%;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 10px;
+        gap: 8px;
+        color: #0a1629;
+        border: 1px solid #d8e0f0;
+        box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+          0px 4px 8px rgba(96, 97, 112, 0.16);
+        border-radius: 16px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+        &__count {
+          width: 20px;
+          height: 20px;
+          background: #0a1629;
+          background: linear-gradient(
+            110.38deg,
+            rgba(0, 209, 255, 0.18) 6.64%,
+            rgba(155, 0, 250, 0.18) 94.88%
+          );
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    &__upcoming {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 18px 0px 5px 0px;
+      color: #0a1629;
+    }
+
+    &__nextBookings {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 18px 0px 5px 0px;
+      color: #0a1629;
+    }
+
+    &__nextBookingsContainer {
+      display: flex;
+      flex-direction: column;
+
+      @include respond(desktop) {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.callsModalContainer {
+  &__basicDetails {
+    padding: 0px 0px 30px 0px;
+
+    &__personalinfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+      border: 1px solid #d8e0f0;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #0a1629 0%, #17315a 100%);
+      color: $color-white;
+      /* Shadow 2 */
+      box-shadow: 0px 6px 12px 0px rgba(0, 4, 97, 0.07);
+      gap: 16px;
+      width: 100%;
+
+      .topcontainer {
+        padding-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #d8e0f0;
+        width: 100%;
+
+        &__name {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 150%;
+          word-break: break-word;
+        }
+
+        &__phone {
+          font-size: 12px;
+          word-break: break-word;
+        }
+      }
+
+      .bottomcontainer {
+        &__details {
+          display: flex;
+          gap: 10px;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          color: $color-white;
+          display: flex;
+
+          &__text {
+            display: flex;
+            align-self: center;
+          }
+
+          & > img {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-self: center;
+          }
+
+          &__linkedinImage {
+            display: flex;
+            align-self: start !important;
+          }
+
+          &__linktag {
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration-line: underline;
+            color: $color-black;
+            display: flex;
+            flex-wrap: wrap;
+            word-break: break-word;
+            align-items: center;
+
+            &:link,
+            &:visited {
+              color: $color-black;
+            }
+
+            span {
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__otherdetails {
+    width: 100%;
+    padding: 24px 0 24px 0;
+    border-top: 1px solid #d8e0f0;
+
+    &__header {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: #0a1629;
+    }
+
+    &__doubtsection {
+      padding: 16px 12px 16px 12px;
+      color: #0a1629;
+      margin-top: 12px;
+      height: 136px;
+      background: #ffffff;
+      border: 1px solid #d8e0f0;
+      border-radius: 16px;
+      overflow-y: scroll;
+      margin: 24px 0px;
+    }
+
+    &__meetboxContainer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+
+      @include respond(phone) {
+        gap: 12px;
+      }
+
+      .copyIcon {
+        width: 64px;
+        height: 48px;
+        margin-top: 12px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .completedCall {
+        background-color: white;
+        border: 1px solid #d8e0f0;
+      }
+    }
+
+    &__meetbox {
+      cursor: pointer;
+      height: 48px;
+      padding: 12px 20px;
+      flex: 1;
+      color: $color-white;
+      font-size: 16px;
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: $color-black;
+      border-radius: 16px;
+
+      &:link,
+      &:visited,
+      &:hover {
+        color: $color-white;
+      }
+
+      &__icon {
+        width: 24px;
+        height: 24px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.testimonialModalContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  &__publishButton {
+    // position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $color-black;
+    color: $color-white;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 150%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    &__delete {
+      background: #d00227;
+    }
+  }
+
+  .trashicon {
+    display: flex;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .publishtext {
+    display: flex;
+    align-self: center;
+  }
+}
+
+.heading {
+  // height: calc(100vh - 280px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: #0a1629;
+}
+
+.calls_modalContainer {
+  padding: 22px !important;
+  padding-top: 12px !important;
+}
+
+.infinitescroll {
+  height: auto;
+
+  @include respond(desktop) {
+    max-height: 300px !important;
+  }
+}
+
+.infinitescroll-completedcalls {
+  @include respond(desktop) {
+    max-height: 540px !important;
+    overflow-y: scroll;
+  }
+}
+
+.infinitescrollcontainer-nextBookings {
+  // height: 100vh;
+  // overflow-y: scroll;
+
+  @include respond(desktop) {
+    max-height: 140px;
+    overflow-y: scroll;
+  }
+}
+.Modal {
+  overflow-y: scroll;
+}
+.Modal__Body {
+  max-height: none;
+  overflow-y: scroll;
+  overscroll-behavior: initial;
+}

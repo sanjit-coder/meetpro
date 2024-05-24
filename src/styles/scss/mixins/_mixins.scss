@@ -1,0 +1,62 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin heading {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #0A1629;
+  width: 100%;
+}
+
+@mixin subHeading {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  color: #7d8592;
+  width: 100%;
+}
+
+@mixin buttonStyle {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  text-align: center;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==smallphone {
+    @media only screen and (max-width: 380px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+}

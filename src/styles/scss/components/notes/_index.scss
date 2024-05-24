@@ -1,0 +1,40 @@
+.notes {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid $color-border-gold;
+  background-color: $bgcolor-notes;
+
+  display: flex;
+
+  &__icon {
+    margin-right: 8px;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateY(-2px);
+    height: 30px;
+  }
+
+  &__text {
+    flex-direction: column;
+    gap: 5px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7d8592;
+    font-display: swap;
+  }
+
+  &__cta {
+    cursor: pointer;
+    color: #358bfe;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration-line: underline;
+  }
+}

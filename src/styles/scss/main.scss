@@ -1,0 +1,65 @@
+//THIS FILE WILL BE THE MAIN SCSS FILE TO BE IMPORTED IN APP.JS
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+//BASE STYLING
+@import "base/base";
+
+//MIXINS
+@import "mixins/mixins";
+
+//COMPONENTS
+@import "components/badge";
+@import "components/button";
+@import "components/input";
+@import "../scss/components/progressbar/index";
+@import "components/multiselect";
+@import "components/card";
+@import "components/offeringscard";
+@import "components/coloredbutton";
+@import "components/navbar";
+@import "components/notes";
+@import "components/profileimage";
+@import "components/bottomsheet";
+@import "components/backdrop";
+@import "components/readmoretext";
+@import "components/bookSlotCard";
+@import "components/totalearnings";
+@import "components/earningcard";
+@import "components/callingCard";
+@import "components/transaction";
+@import "components/bottomnavbar";
+@import "components/sideNav";
+@import "components/testimonialcard";
+@import "components/settingsCard";
+@import "components/reactcalendar";
+@import "components/analyticsCard";
+@import "components/pricingDetailsPopup";
+@import "components/serviceQuestion";
+
+//VARIABLES
+@import "variables/variables";
+
+//PAGES
+@import "pages/astrologers";
+@import "pages/home";
+@import "pages/onboarding/index";
+@import "pages/onboarding/success";
+@import "pages/offerings";
+@import "pages/onboarding/editOfferings";
+@import "pages/onboarding/bankdetails.scss";
+@import "pages/onboarding/editprofile.scss";
+@import "pages/calls";
+@import "pages/addslot";
+@import "pages/addslot/result";
+@import "pages/creatorpublishpage/index";
+@import "pages/landingpage";
+@import "pages/earnings";
+@import "pages/weeklyavailability";
+@import "pages/feedback";
+@import "pages/settings";
+@import "pages/blockedcalender";
+@import "pages/availability";
+@import "pages/analytics";
+@import "pages/servicequestions";

@@ -1,0 +1,127 @@
+.label {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.inputcontainer {
+  background-color: $color-white;
+  border: 1px solid $color-border-badge;
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+  margin-bottom: 12px;
+
+  &__textarea {
+    .inputcontainer__input {
+      height: 150px;
+      resize: none;
+    }
+  }
+
+  &__textareaquestion {
+    height: 74px;
+
+    .inputcontainer__input {
+      height: 100%;
+      overflow-y: scroll;
+      resize: none;
+
+      &:disabled {
+        background-color: white;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    padding: 12px;
+    border-radius: 16px;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    position: absolute;
+    right: 14px;
+  }
+
+  &__dropdowncontainer {
+    width: 100%;
+
+    @include respond(phone) {
+      width: 90%;
+    }
+
+    &__input {
+      width: 100%;
+      margin-bottom: 24px;
+
+
+    }
+  }
+}
+
+div.ui.input>input {
+  border-radius: 16px;
+  border: 1px solid $color-border-badge;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-black;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+div.ui.label {
+  border-radius: 16px;
+  border: 1px solid $color-border-badge;
+  background: none;
+}
+
+.ui.left.labeled.input {
+  border-radius: 40px !important;
+  // height: 48px;
+}
+
+.ui.labeled.input>.label {
+  max-width: 40%;
+}
+
+.ui.basic.label {
+  color: $color-badge !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+}
+
+div.ui.icon.input>i.icon {
+  opacity: 1;
+  border-radius: none;
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+
+div.ui.icon.input>input {
+  padding-right: 0px !important;
+}
+
+.ui.labeled.input>.label:not(.corner) {
+  padding: 12px !important;
+
+  @include respond(phone) {
+    padding: 14px 7px !important;
+  }
+}

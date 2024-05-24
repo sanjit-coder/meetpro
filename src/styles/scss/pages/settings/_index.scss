@@ -1,0 +1,124 @@
+.settingscontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  width: 100%;
+  height: calc(100vh - 100px);
+
+  @include respond(desktop) {
+    align-items: start;
+  }
+
+  &__box {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include respond(desktop) {
+      margin-left: 60px;
+      width: 54%;
+    }
+
+    .minmaxslotcontainer {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      overflow-y: scroll;
+      flex-basis: 85%;
+
+      .minslot {
+        &__inputs {
+          display: flex;
+          width: 100%;
+
+          &__days {
+            width: 50%;
+            margin-right: 6px;
+          }
+
+          &__dropdown {
+            width: 50%;
+          }
+
+          &__text {
+            display: flex;
+            margin-left: 10px;
+            transform: translateY(-25%);
+            align-self: center;
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            color: $color-black;
+          }
+        }
+      }
+
+      .maxslot {
+        &__dropdown {
+          width: 100%;
+        }
+      }
+    }
+
+    .slotheading {
+      @include heading;
+      margin-bottom: 8px;
+    }
+    .slotsubheading {
+      @include subHeading;
+      margin-bottom: 16px;
+    }
+
+    .settingsbuttoncontainer {
+      width: 100%;
+      position: fixed;
+      bottom: 20px;
+      width: 85%;
+      @include respond(desktop) {
+        width: 54%;
+      }
+      .settingsbutton {
+        @include buttonStyle;
+        width: 100%;
+
+        // @include respond(smallphone) {
+        //   margin-top: 10px;
+        // }
+      }
+    }
+  }
+}
+
+// .ui.selection.active.dropdown .menu {
+//   border-radius: 16px;
+// }
+.ui.active.selection.dropdown {
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+}
+.ui.selection.active.dropdown:hover .menu {
+  border-color: #d8e0f0 !important;
+}
+.ui.selection.active.dropdown .menu {
+  border-color: #d8e0f0 !important;
+  border-radius: 14px !important;
+  margin-top: 8px;
+}
+.ui.floating.dropdown {
+  .menu {
+    margin-top: -20px !important;
+    border-radius: 14px !important;
+  }
+}
+.ui.dropdown .menu > .item > .image,
+.ui.dropdown .menu > .item > img,
+.ui.dropdown > .text > .image,
+.ui.dropdown > .text > img {
+  height: 20px;
+  width: 20px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}

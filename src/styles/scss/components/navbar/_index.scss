@@ -1,0 +1,233 @@
+.navbarContainer {
+  height: 72px;
+  display: flex;
+  padding: 16px 32px 16px 32px;
+  justify-content: space-between;
+  gap: 3%;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 6px rgba(96, 97, 112, 0.16);
+  border-radius: 0px 0px 16px 16px;
+  z-index: 100;
+
+  .logo {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .logo__landingpage {
+    height: 40px;
+    width: 162px;
+    display: flex;
+  }
+
+  &__profileSection {
+    display: flex;
+    align-items: center;
+    .profileImage {
+      height: 40px;
+      width: 40px;
+      overflow: hidden;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      &__publishpage {
+        display: none;
+      }
+    }
+
+    .dropdownContainer {
+      display: flex;
+      align-self: center;
+      margin-left: 5px;
+      width: 8px;
+      height: 10px;
+
+      .dropdownContainerArrow {
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s;
+
+        &__active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .headingBox {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(desktop) {
+      width: 100% !important;
+    }
+
+    .heading {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      display: flex;
+      align-self: center;
+      font-display: swap;
+    }
+
+    .secondaryText {
+      font-weight: 600;
+      font-size: 12px;
+      color: $color-badge;
+      align-self: flex-start;
+    }
+  }
+
+  .claimLinkBox {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid #00d2b3;
+    cursor: pointer;
+
+    @include respond(phone) {
+      font-size: 14px;
+      padding: 4.5px;
+    }
+
+    &__text {
+      font-weight: 600;
+      font-size: 16px;
+      background: linear-gradient(180deg, #00d2b3 0%, #019886 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      @include respond(phone) {
+        font-size: 12px;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-self: center;
+      width: 20px;
+      height: 20px;
+
+      @include respond(phone) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    // @include respond(phone) {
+    //   transform: translateX(10px);
+    // }
+  }
+
+  .logoheading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-self: center;
+    color: $color-black;
+
+    span {
+      background: linear-gradient(92.6deg, #00d1ff 0.47%, #9b00fa 43.2%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    // @include respond(phone) {
+    //   display: none;
+    // }
+
+    &__left {
+      @include respond(phone) {
+        display: flex;
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+.floatingDropdownUsername {
+  width: 100%;
+  // text-align: center;
+  padding: 12px 0px;
+  font-family: "Nunito Sans" !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: $color-black;
+  border-bottom: 1px solid #d8e0f0;
+}
+
+.floatingDropdownText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__icon {
+    display: flex;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__label {
+    font-family: "Nunito Sans" !important;
+    font-style: normal;
+    display: flex;
+    align-self: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    margin-left: 8px;
+    color: $color-black;
+
+    &__error {
+      color: #cb0606;
+    }
+  }
+}
+
+.ui.dropdown .menu > .header {
+  border-bottom: 1px solid #d8e0f0;
+  color: $color-black !important;
+  font-family: "Nunito Sans" !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 150% !important;
+  text-transform: none !important;
+  padding-bottom: 12px !important;
+  word-break: break-word;
+  text-align: center !important;
+}
+.ui.dropdown .menu .selected.item {
+  background: white !important;
+}
+.ui.floating.dropdown > .menu {
+  width: 214px !important;
+  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04),
+    0px 8px 16px rgba(96, 97, 112, 0.16);
+  border-radius: 14px;
+}

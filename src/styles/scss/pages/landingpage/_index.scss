@@ -1,0 +1,1135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+
+.landingpagecontainer {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.92) 100%
+    );
+    box-shadow: 0px 2px 8px rgba(225, 225, 225, 0.25);
+
+    backdrop-filter: blur(2px);
+    width: 100%;
+    padding: 16px 0px;
+    padding-left: 10%;
+    padding-right: 11%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      background-color: $color-white;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.94) 100%
+      );
+      box-shadow: 0px 2px 8px rgba(225, 225, 225, 0.25);
+      backdrop-filter: blur(2px);
+      border-radius: 0px 0px 16px 16px;
+      padding-left: 10%;
+      padding-right: 10%;
+      align-items: center;
+    }
+
+    &__logocontainer {
+      display: flex;
+      align-items: center;
+
+      &__logo {
+        width: 162px;
+        height: 40px;
+        display: flex;
+        align-self: center;
+        margin-right: 16px;
+
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      &__phonelogo {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-self: center;
+
+        @include respond(desktop) {
+          display: none;
+        }
+      }
+
+      &__text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        align-self: center;
+        color: $color-black;
+
+        span {
+          background: linear-gradient(92.6deg, #00d1ff 0.47%, #9b00fa 43.2%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        @include respond(phone) {
+          display: none;
+        }
+      }
+    }
+
+    &__buttoncontainer {
+      display: flex;
+      align-items: center;
+
+      .loginbutton {
+        text-align: center;
+        padding: 12px 20px;
+        border-radius: 16px;
+        color: $color-black;
+        font-weight: 700;
+        font-size: 16px;
+        border: 1px solid $color-black;
+        margin-right: 16px;
+        cursor: pointer;
+
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      .signupbutton {
+        padding: 12px 20px;
+        text-align: center;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #0a1629 0%, #17315a 100%);
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: 16px;
+        color: $color-white;
+        cursor: pointer;
+
+        @include respond(phone) {
+          padding: 8px 16px;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+
+  .landingpage {
+    // font-family: "Nunito Sans";
+    // font-family: "Poppins";
+
+    .topsection {
+      background-color: $color-white;
+      padding: 80px 0px;
+      padding-bottom: 55px;
+      display: flex;
+      justify-content: center;
+      height: auto;
+
+      @include respond(phone) {
+        align-items: center;
+        padding: 32px 0px;
+        padding-bottom: 40px;
+      }
+
+      &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(phone) {
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 50%;
+
+          @include respond(phone) {
+            flex-basis: 100%;
+            margin-bottom: 40px;
+          }
+
+          &__heading {
+            // font-family: "Poppins";
+
+            // font-display: swap;
+            font-weight: 700;
+            font-size: 54px;
+            text-transform: capitalize;
+            color: $color-black;
+            width: 100%;
+            margin-bottom: 32px;
+            line-height: 150%;
+            font-display: swap;
+
+            span {
+              // font-family: "Poppins";
+              // font-display: swap;
+              background: linear-gradient(
+                92.6deg,
+                #00d1ff 0.47%,
+                #9b00fa 43.2%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+
+              margin-right: 10px;
+              font-style: italic;
+              font-display: swap;
+              text-transform: capitalize;
+            }
+
+            @include respond(phone) {
+              font-size: 28px;
+              margin-bottom: 24px;
+            }
+          }
+
+          &__text {
+            // font-family: "Poppins";
+            font-display: swap;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 40px;
+            margin-bottom: 32px;
+            color: #252525;
+            font-display: swap;
+
+            @include respond(phone) {
+              font-size: 14px;
+              line-height: 28px;
+              margin-bottom: 24px;
+            }
+          }
+
+          &__inputtext {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            color: #0094ff;
+            // font-family: "Poppins";
+            font-display: swap;
+            margin-bottom: 10px;
+
+            @include respond(phone) {
+              font-size: 14px;
+              line-height: 21px;
+            }
+          }
+
+          // &__input {
+          //   width: 100%;
+          // }
+        }
+
+        &__right {
+          flex-basis: 50%;
+          transform: translateY(-10px);
+
+          @include respond(phone) {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateX(-5%);
+          }
+
+          &__imagesection {
+            float: right;
+            width: 417px;
+            height: 505px;
+
+            @include respond(phone) {
+              float: none;
+              width: 297.27px;
+              height: 360px;
+            }
+          }
+        }
+      }
+    }
+
+    .aboutsection {
+      background: linear-gradient(
+        96.12deg,
+        rgba(0, 209, 255, 0.04) 0%,
+        rgba(155, 0, 250, 0.04) 100%
+      );
+
+      height: 448px;
+
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+
+      @include respond(phone) {
+        height: 440px;
+        align-items: center;
+        padding-top: 40px;
+      }
+
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+
+        @include respond(phone) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__signupbox {
+          flex-basis: 50%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+
+          @include respond(phone) {
+            flex-basis: 100%;
+            padding-bottom: 48px;
+          }
+
+          h1 {
+            font-weight: 800;
+            font-size: 52px;
+            line-height: 150%;
+            color: $color-black;
+            margin-bottom: 40px;
+            // font-family: "Poppins";
+            font-display: swap;
+            margin-bottom: 40px;
+            display: flex;
+
+            @include respond(phone) {
+              font-weight: 800;
+              font-size: 24px;
+              margin-bottom: 24px;
+            }
+          }
+
+          &__signup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            width: 294px;
+            padding: 16px 0px;
+            height: 64px;
+            border-radius: 16px;
+            background: linear-gradient(180deg, #0a1629 0%, #17315a 100%);
+            border-radius: 21.3333px;
+            font-family: "Nunito Sans" !important;
+            font-weight: 700;
+            font-size: 21.3333px;
+            font-display: swap;
+            color: $color-white;
+            cursor: pointer;
+
+            @include respond(phone) {
+              border-radius: 12px;
+              display: flex;
+              justify-content: initial;
+              align-items: initial;
+              align-self: center;
+              padding: 8px 16px;
+              width: initial;
+              height: initial;
+              border-radius: 12px;
+              font-size: 16px;
+
+              text-align: center;
+            }
+          }
+        }
+
+        &__right {
+          flex-basis: 40%;
+
+          @include respond(phone) {
+            flex-basis: none;
+          }
+
+          &__imagesection {
+            transform: translateX(40px);
+            width: 622px;
+            overflow: hidden;
+            height: 448px;
+
+            @include respond(phone) {
+              transform: translateX(0px);
+              width: 360px;
+              height: 260px;
+            }
+          }
+        }
+      }
+    }
+
+    .mentorsection {
+      background-color: $color-white;
+      padding: 92px 0px;
+      display: flex;
+      flex-direction: column;
+
+      @include respond(phone) {
+        padding: 40px 0px;
+        justify-content: center;
+      }
+
+      .parentcontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__mainheading {
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 150%;
+        color: $color-black;
+        // font-family: "Poppins";
+        margin-bottom: 64px;
+
+        @include respond(phone) {
+          font-size: 24px;
+          margin-bottom: 32px;
+          display: flex;
+
+          width: 85%;
+          align-self: center;
+        }
+      }
+
+      .mentorbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include respond(phone) {
+          justify-content: space-around;
+        }
+
+        & > * {
+          width: 33%;
+
+          @include respond(phone) {
+            width: 45%;
+            margin-bottom: 32px;
+          }
+        }
+
+        &:last-child {
+          @include respond(phone) {
+            margin-bottom: 0px;
+          }
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          // align-items: center;
+          margin-bottom: 64px;
+
+          @include respond(phone) {
+            margin-bottom: 0px;
+          }
+
+          &:nth-last-child(n + 3) {
+            margin-bottom: 64px;
+
+            @include respond(phone) {
+              margin-bottom: 32px;
+            }
+          }
+
+          &:nth-last-child(-n + 2) {
+            width: 50%;
+
+            @include respond(phone) {
+              width: 45%;
+            }
+          }
+
+          &__icon {
+            width: 60px;
+            height: 60px;
+            align-self: center;
+            margin-bottom: 12px;
+            display: flex;
+            justify-self: center;
+            text-align: center;
+
+            @include respond(phone) {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          &__title {
+            // font-family: "Poppins";
+            font-display: swap;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: $color-black;
+            margin-bottom: 12px;
+
+            text-align: center;
+
+            @include respond(phone) {
+              font-size: 14px;
+              line-height: 21px;
+              text-align: center;
+            }
+          }
+
+          &__description {
+            // font-family: "Poppins";
+            font-display: swap;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: $color-badge;
+            align-self: center;
+            width: 90%;
+
+            @include respond(phone) {
+              font-size: 12px;
+              line-height: 18px;
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .createlinksection {
+      height: 464px;
+      background: linear-gradient(
+        94.34deg,
+        rgba(0, 209, 255, 0.04) 0%,
+        rgba(155, 0, 250, 0.04) 100%
+      );
+      padding-bottom: 55px;
+      display: flex;
+      justify-content: center;
+
+      @include respond(phone) {
+        height: 573px;
+        padding-top: 40px;
+        padding-bottom: 0px;
+      }
+
+      &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(phone) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 52%;
+          padding-top: 120px;
+
+          @include respond(phone) {
+            flex-basis: 100%;
+            padding-top: 0px;
+            margin-bottom: 32px;
+          }
+
+          &__heading {
+            // font-family: "Poppins";
+            font-display: swap;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 150%;
+            color: $color-black;
+            text-transform: capitalize;
+            margin-bottom: 40px;
+
+            @include respond(phone) {
+              font-size: 24px;
+              margin-bottom: 24px;
+            }
+          }
+
+          &__input {
+            width: 100%;
+          }
+        }
+
+        &__right {
+          flex-basis: 48%;
+          padding-top: 38px;
+
+          @include respond(phone) {
+            flex-basis: 100%;
+            padding-top: 0px;
+          }
+
+          &__imagesection {
+            float: right;
+            width: 383px;
+            height: 426px;
+
+            @include respond(phone) {
+              float: none;
+              width: 296px;
+              height: 329px;
+              transform: translateY(-18px);
+            }
+          }
+        }
+      }
+    }
+
+    .faqsection {
+      background-color: $color-white;
+      padding: 92px 0px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      @include respond(phone) {
+        padding: 32px 0px;
+      }
+
+      &__heading {
+        text-align: center;
+        // font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 42px;
+        text-transform: capitalize;
+        color: $color-black;
+        margin-bottom: 32px;
+
+        @include respond(phone) {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 24px;
+        }
+      }
+
+      &__accordion {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+          margin-bottom: 16px;
+        }
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .footersection {
+      border-top: 1px solid #d8e0f0;
+      background-color: $color-white;
+      padding-top: 40px;
+      // height: 400px;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+
+        &__topsection {
+          border-bottom: 1px solid #d8e0f0;
+          display: flex;
+          padding-bottom: 60px;
+
+          @include respond(phone) {
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          &__logocontainer {
+            display: flex;
+
+            flex-basis: 50%;
+
+            @include respond(phone) {
+              flex-basis: 100%;
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+              margin-bottom: 32px;
+            }
+
+            .logo {
+              width: 162px;
+              height: 40px;
+              display: flex;
+              // align-self: center;
+              margin-right: 16px;
+
+              @include respond(phone) {
+                // width: 43px;
+                // height: 43px;
+                align-self: center;
+                margin-right: 16px;
+              }
+            }
+
+            .text {
+              font-family: "Nunito Sans" !important;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 36px;
+              display: flex;
+              transform: translateY(-2%);
+              // align-self: center;
+              color: $color-black;
+              font-display: swap;
+
+              span {
+                background: linear-gradient(
+                  92.6deg,
+                  #00d1ff 0.47%,
+                  #9b00fa 43.2%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+              }
+
+              @include respond(phone) {
+                transform: translateY(0);
+                align-self: center;
+                font-size: 31px;
+              }
+            }
+          }
+
+          &__right {
+            flex: 1;
+            display: flex;
+
+            @include respond(phone) {
+              flex: initial;
+              flex-basis: 100%;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .linkscontainer {
+              display: flex;
+              flex-direction: column;
+
+              &:first-child {
+                width: 70%;
+
+                @include respond(phone) {
+                  width: 100%;
+                  text-align: center;
+                  margin-bottom: 32px;
+                }
+              }
+
+              & > * {
+                @include respond(phone) {
+                  width: 100%;
+                  text-align: center;
+                }
+              }
+
+              &__heading {
+                // font-family: "Poppins";
+                font-display: swap;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: $color-black;
+                margin-bottom: 24px;
+
+                @include respond(phone) {
+                  font-size: 16px;
+                  line-height: 24px;
+                }
+              }
+
+              &__links {
+                list-style: none;
+
+                li {
+                  cursor: pointer;
+                  // font-family: "Poppins";
+                  font-display: swap;
+                  font-style: normal;
+                  font-weight: 500;
+                  color: #7d8592;
+                  font-size: 16px;
+                  line-height: 21px;
+
+                  &:not(:last-child) {
+                    margin-bottom: 16px;
+                  }
+                }
+
+                &__offering {
+                  &:link,
+                  &:visited {
+                    color: #7d8592;
+                    text-decoration: none;
+                  }
+
+                  &:hover {
+                    color: #7d8592;
+                  }
+                }
+
+                &__maillink {
+                  // font-family: "Poppins";
+                  font-display: swap;
+                  font-style: normal;
+                  font-weight: 400;
+                  color: #7d8592;
+                  font-size: 16px;
+                  line-height: 21px;
+
+                  &:link,
+                  &:visited {
+                    color: #7d8592;
+                    text-decoration: none;
+                  }
+
+                  &:hover {
+                    color: #7d8592;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &__bottomsection {
+          padding: 70px 0px;
+
+          @include respond(phone) {
+            padding: 40px 0px;
+          }
+
+          .bottomlinks {
+            display: flex;
+            justify-content: center;
+
+            &__link {
+              margin-right: 28px;
+              cursor: pointer;
+
+              &:last-child {
+                margin-right: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      .bottomstripe {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background-color: $color-black;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 30px;
+        color: $color-white;
+
+        @include respond(phone) {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+
+  &__footer {
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
+
+.accordioncontainer {
+  padding: 40px;
+  border: 1px solid #d8e0f0;
+  border-radius: 24px;
+  width: 100%;
+  cursor: pointer;
+
+  @include respond(phone) {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  &__topsection {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+    margin-bottom: 0px;
+
+    &__open {
+      transition: all 0.2s;
+      margin-bottom: 16px;
+    }
+
+    &__heading {
+      // font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      color: $color-black;
+
+      @include respond(phone) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-self: center;
+      width: 14px;
+      height: 7px;
+    }
+
+    &__iconimage {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+
+      &__inverted {
+        transition: all 0.5s;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__bottomsection {
+    // font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-badge;
+
+    @include respond(phone) {
+      font-size: 12px;
+    }
+  }
+}
+
+.signuplink {
+  font-weight: 700;
+
+  color: $color-white;
+
+  &:link,
+  &:visited {
+    font-weight: 700;
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    font-weight: 700;
+
+    color: $color-white;
+  }
+}
+
+.splitinputcontainer {
+  border: 1.5px solid #0a1629;
+  border-radius: 24px;
+  width: 100%;
+
+  position: relative;
+  display: flex;
+
+  align-items: center;
+
+  &__onboarding {
+    border: 1px solid #d8e0f0;
+  }
+
+  &__publishpage {
+    background-color: $color-white;
+  }
+
+  @include respond(phone) {
+    border-radius: 15px;
+    border: 0.9375px solid #0a1629;
+  }
+
+  .lefticonbox {
+    padding: 16px;
+    border-right: 1.5px solid #d8e0f0;
+
+    @include respond(phone) {
+      padding: 10px;
+    }
+
+    .lefticon {
+      width: 32px;
+      height: 32px;
+
+      @include respond(phone) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__onboarding {
+      font-family: "Nunito Sans" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #7d8592;
+    }
+  }
+
+  .labelbox {
+    padding-left: 16px;
+    // font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: $color-black;
+    // max-width: 38%;
+
+    @include respond(phone) {
+      font-size: 13.75px;
+      padding-left: 10px;
+    }
+  }
+
+  .inputbox {
+    max-width: 55%;
+
+    @include respond(phone) {
+      max-width: 32%;
+    }
+
+    &__onboarding {
+      padding-left: 16px;
+      max-width: 85%;
+
+      @include respond(phone) {
+        max-width: 50%;
+      }
+    }
+
+    .nameinput {
+      background: inherit;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      color: $color-black;
+
+      @include respond(phone) {
+        font-size: 13.75px;
+        // max-width: 75%;
+      }
+
+      &__onboarding {
+        width: 100%;
+        font-family: "Nunito Sans" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  .righticonbox {
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include respond(phone) {
+      right: 10px;
+    }
+  }
+}
+
+.errorstate {
+  border: 1.5px solid #cb0606;
+
+  &__text {
+    margin-top: 8px;
+    font-family: "Nunito Sans" !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Error */
+
+    color: #cb0606;
+  }
+}

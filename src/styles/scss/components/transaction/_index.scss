@@ -1,0 +1,71 @@
+.transaction {
+  padding: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito Sans";
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-border-badge;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    &__name {
+      max-width: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      align-self: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: #358bfe;
+
+      @include respond(desktop) {
+        font-size: 18px;
+      }
+    }
+
+    &__price {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 135%;
+      color: $color-black;
+
+      @include respond(desktop) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__date {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &__text {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 150%;
+      color: $color-badge;
+
+      @include respond(desktop) {
+        font-size: 14px;
+      }
+    }
+
+    &__value {
+      @extend .transaction__date__text;
+    }
+  }
+}

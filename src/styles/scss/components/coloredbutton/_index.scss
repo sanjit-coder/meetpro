@@ -1,0 +1,47 @@
+.coloredbutton {
+  padding: 12px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+
+  &__green {
+    background-color: $bgcolor-lightgreen;
+    color: $color-greentext;
+    align-self: center;
+  }
+
+  &__blue {
+    background-color: $bgcolor-lightblue;
+    color: $color-bluetext;
+    align-self: center;
+  }
+
+  &__black {
+    padding: 12px;
+    background-color: $color-black;
+    color: $color-white;
+    justify-content: space-around;
+    text-align: initial;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 8px;
+    display: flex;
+    align-self: center;
+  }
+
+  &__text {
+    display: flex;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  &__righticon {
+    display: flex;
+    align-self: center;
+  }
+}

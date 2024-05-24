@@ -1,0 +1,78 @@
+.analyticscardcontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  @include respond(phone) {
+    order: 3;
+    width: 85%;
+
+    margin-top: 5%;
+  }
+
+  & > * {
+    width: calc(20% - 16px);
+
+    @include respond(phone) {
+      width: calc(50% - 8px);
+    }
+  }
+
+  .analyticscard {
+    border: 1px solid #d8e0f0;
+    border-radius: 16px;
+    padding: 16px;
+    height: auto;
+    cursor: pointer;
+    font-family: "Nunito Sans";
+    font-style: normal;
+
+    &__active {
+      border: 1px solid #0a1629;
+      box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+        0px 4px 8px rgba(96, 97, 112, 0.16);
+    }
+
+    &__revenue {
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+
+    &__heading {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: $color-black;
+      margin-bottom: 16px;
+    }
+
+    &__number {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 120%;
+      color: #358bfe;
+      margin-bottom: 4px;
+    }
+
+    &__percentage {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      &__icon {
+        display: flex;
+        align-self: center;
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #7d8592;
+      }
+    }
+  }
+}

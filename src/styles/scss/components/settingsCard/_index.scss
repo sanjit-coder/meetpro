@@ -1,0 +1,38 @@
+.settingscardcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  overflow-y: scroll;
+  gap: 16px;
+}
+
+.settingscard {
+  padding: 16px;
+  border: 1px solid #d8e0f0;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: $color-black;
+      display: flex;
+      align-self: center;
+    }
+
+    &__icon {
+      display: flex;
+      align-self: center;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.bankDetails_container {
+  .bankdetails_detailsContainer {
+    padding: 32px;
+  }
+
+  .bankDetails_footer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    // position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .bankdetails_notes {
+    margin-bottom: 24px;
+  }
+}

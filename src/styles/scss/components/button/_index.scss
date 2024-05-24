@@ -1,0 +1,243 @@
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // position: absolute;
+  bottom: 0px;
+  // position: fixed;
+  // padding-top: 20px;
+  padding-bottom: 10px;
+  // margin-bottom: 20px;
+  margin-top: 10px;
+  background: linear-gradient(transparent, white 15px);
+
+  &__bookSlot {
+    position: fixed;
+  }
+
+  &__availability {
+    @include respond(desktop) {
+      justify-content: start;
+      margin-left: 60px;
+    }
+  }
+
+  &__editprofile {
+    margin-top: 20px;
+    @include respond(desktop) {
+      justify-content: start;
+      margin-left: 60px;
+    }
+  }
+
+  &__offeringspage {
+    // position: fixed;
+    // bottom: 30px;
+    margin-top: 40px;
+    @include respond(desktop) {
+      // position: initial;
+      // bottom: 0px;
+      justify-content: start;
+      margin-left: 60px;
+      width: 54%;
+    }
+  }
+
+  &__bankdetails {
+    @include respond(desktop) {
+      justify-content: start;
+      margin-left: 20%;
+    }
+  }
+
+  &__homepage {
+    bottom: 56px;
+    background: none;
+    z-index: 100;
+
+    @include respond(phone) {
+      position: fixed;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-black;
+    font-weight: 700;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    padding: 20px;
+    background-color: $color-black;
+    border-radius: 16px;
+    color: $color-white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @include respond(desktop) {
+      width: 45%;
+    }
+
+    &__availability {
+      @include respond(desktop) {
+        width: 54%;
+      }
+    }
+
+    &__editprofile {
+      @include respond(desktop) {
+        width: 54%;
+      }
+    }
+
+    &__offeringspage {
+      @include respond(desktop) {
+        width: 100%;
+      }
+    }
+
+    &__bankdetails {
+      @include respond(desktop) {
+        width: 100%;
+      }
+    }
+
+    &__profile {
+      @include respond(desktop) {
+        width: 52%;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    &__homepage {
+      padding: 12px 0px;
+
+      @include respond(desktop) {
+        display: none;
+      }
+    }
+
+    &__feedback {
+      @include respond(desktop) {
+        width: 45%;
+      }
+      width: 83%;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    display: flex;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.tctext {
+  position: absolute;
+  bottom: 27px;
+  left: 8%;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 100;
+
+  @include respond(desktop) {
+    display: none;
+    z-index: initial;
+  }
+
+  &__checkbox {
+    display: inline-block;
+  }
+
+  &__info {
+    margin-left: 5px;
+    display: flex;
+    align-self: center;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    color: #7d8592;
+
+    &__link {
+      color: #7d8592;
+      margin: 0px 5px;
+      text-decoration: underline;
+
+      &:link,
+      &:visited {
+        color: #7d8592;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        color: #7d8592;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.tctextdesktop {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  &__checkbox {
+    display: inline-block;
+  }
+
+  &__info {
+    margin-left: 10px;
+
+    align-self: center;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #7d8592;
+
+    &__link {
+      color: #7d8592;
+
+      margin: 0px 5px;
+      text-decoration: underline;
+
+      &:link,
+      &:visited {
+        color: #7d8592;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        color: #7d8592;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+const namespace = `AVAILABILITY_`
+
+export const SET_ISLOADING = `${namespace}SET_ISLOADING`
+
+export const GET_MODIFIED_DATES = `${namespace}GET_MODIFIED_DATES`
+
+export const GET_MODIFIED_DATES_SUCCESS = `${namespace}GET_MODIFIED_DATES_SUCCESS`
+
+export const DELETE_CONFIGURED_DATE = `${namespace}DELETE_CONFIGURED_DATE`
+export const DELETE_CONFIGURED_DATE_SUCCESS = `${namespace}DELETE_CONFIGURED_DATE_SUCCESS`
